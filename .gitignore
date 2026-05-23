@@ -1,0 +1,9 @@
+subs-check*
+*.zip
+*.tar.gz
+logs/
+tmp/
+output/
+backup/
+.env
+
