@@ -97,6 +97,16 @@ if (-not $SkipGitPush -and (Test-Path (Join-Path $Root ".git"))) {
         exit 0
     }
 
+    $GitUserName = & git config user.name
+    if (-not $GitUserName) {
+        & git config user.name "local-proxy-runner"
+    }
+
+    $GitUserEmail = & git config user.email
+    if (-not $GitUserEmail) {
+        & git config user.email "local-proxy-runner@users.noreply.github.com"
+    }
+
     & git add -- public/*.yaml public/*.txt public/index.html
     if (Test-Path (Join-Path $PublicDir "stats")) {
         & git add -- public/stats
