@@ -27,6 +27,8 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Run strict proxy check
+        env:
+          SUBS_CHECK_TIMEOUT: 15m
         run: bash scripts/run-subs-check.sh
 
       - name: Commit updated subscription files

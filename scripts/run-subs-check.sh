@@ -9,6 +9,7 @@ ARCHIVE="subs-check_Linux_x86_64.tar.gz"
 URL="https://github.com/sinspired/subs-check/releases/download/${VERSION}/${ARCHIVE}"
 
 mkdir -p tmp public
+touch tmp/run-start.stamp
 
 if [[ ! -x tmp/subs-check ]]; then
   curl -L --retry 3 --retry-delay 5 -o "tmp/${ARCHIVE}" "$URL"
@@ -28,6 +29,9 @@ fi
 test -s public/all.yaml
 test -s public/mihomo.yaml
 test -s public/base64.txt
+test public/all.yaml -nt tmp/run-start.stamp
+test public/mihomo.yaml -nt tmp/run-start.stamp
+test public/base64.txt -nt tmp/run-start.stamp
 
 cat > public/index.html <<'HTML'
 <!doctype html>
@@ -41,4 +45,3 @@ cat > public/index.html <<'HTML'
   <li><a href="./history.yaml">history.yaml</a></li>
 </ul>
 HTML
-
