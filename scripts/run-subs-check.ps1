@@ -77,6 +77,33 @@ foreach ($RelativePath in $RequiredFiles) {
     }
 }
 
+$Base64Path = Join-Path $PublicDir "base64.txt"
+$DecodedSubscription = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String(((Get-Content -Raw $Base64Path).Trim())))
+$NormalizedLines = foreach ($Line in ($DecodedSubscription -split "`r?`n")) {
+    $Trimmed = $Line.Trim()
+    if (-not $Trimmed) {
+        continue
+    }
+
+    if ($Trimmed.StartsWith("trojan://")) {
+        $SchemeLength = "trojan://".Length
+        $QueryIndex = $Trimmed.IndexOf("?")
+        $SearchEnd = if ($QueryIndex -ge 0) { $QueryIndex } else { $Trimmed.Length }
+        $AtIndex = $Trimmed.LastIndexOf("@", $SearchEnd - 1, $SearchEnd - $SchemeLength)
+
+        if ($AtIndex -gt $SchemeLength) {
+            $UserInfo = $Trimmed.Substring($SchemeLength, $AtIndex - $SchemeLength)
+            $EncodedUserInfo = [Uri]::EscapeDataString([Uri]::UnescapeDataString($UserInfo))
+            $Trimmed = $Trimmed.Substring(0, $SchemeLength) + $EncodedUserInfo + $Trimmed.Substring($AtIndex)
+        }
+    }
+
+    $Trimmed
+}
+$NormalizedSubscription = ($NormalizedLines -join "`n") + "`n"
+$NormalizedBase64 = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($NormalizedSubscription))
+Set-Content -Path $Base64Path -Value $NormalizedBase64 -Encoding ascii
+
 @'
 <!doctype html>
 <meta charset="utf-8">
