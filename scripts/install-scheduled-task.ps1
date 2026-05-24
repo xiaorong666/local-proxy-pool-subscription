@@ -1,6 +1,7 @@
 param(
     [string]$TaskName = "LocalProxyPoolSubscription",
     [int]$EveryHours = 6,
+    [int]$TimeoutMinutes = 45,
     [switch]$RunNow
 )
 
@@ -12,7 +13,7 @@ $LogDir = Join-Path $Root "logs"
 $LogFile = Join-Path $LogDir "local-proxy-pool-task.log"
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
 
-$Command = "& '$RunScript' *>> '$LogFile' 2>&1"
+$Command = "& '$RunScript' -TimeoutMinutes $TimeoutMinutes *>> '$LogFile' 2>&1"
 $EncodedCommand = [Convert]::ToBase64String([Text.Encoding]::Unicode.GetBytes($Command))
 $Action = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -EncodedCommand $EncodedCommand"
 $Trigger = New-ScheduledTaskTrigger -Once -At (Get-Date).AddMinutes(2) -RepetitionInterval (New-TimeSpan -Hours $EveryHours) -RepetitionDuration (New-TimeSpan -Days 3650)

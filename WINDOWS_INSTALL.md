@@ -35,7 +35,7 @@ Run once from the project root:
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\install-scheduled-task.ps1 -RunNow
 ```
 
-The scheduled task runs every 6 hours. Logs are written to:
+The scheduled task runs every 6 hours and allows each local check to run for 45 minutes. Logs are written to:
 
 ```text
 logs\local-proxy-pool-task.log
