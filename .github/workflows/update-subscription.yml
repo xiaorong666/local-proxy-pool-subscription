@@ -10,6 +10,9 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 concurrency:
   group: update-proxy-subscription
   cancel-in-progress: true
@@ -21,13 +24,13 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Run strict proxy check
         run: bash scripts/run-subs-check.sh
 
       - name: Commit updated subscription files
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: update proxy subscriptions"
           file_pattern: "public/*.yaml public/*.txt public/index.html public/stats/*"
@@ -43,4 +46,3 @@ jobs:
       - name: Deploy Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
