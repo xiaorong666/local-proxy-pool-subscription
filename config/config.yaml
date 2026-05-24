@@ -319,29 +319,8 @@ system-proxy: ""
 # Github 代理：获取订阅使用
 # github-proxy: "https://ghfast.top/"
 github-proxy: ""
-# GitHub 代理列表：程序会自动筛选可用的 GitHub 代理
-ghproxy-group:
-  - "https://github.intellisensing.tech/"
-  - "https://ghproxy.wjsphy.top/"
-  - "https://githubacc.caiaiwan.com/"
-  - "https://l0l0l.cc/"
-  - "https://cdn-gh.141888.xyz/"
-  - "https://ghjs.131412.eu.org/"
-  - "https://gh.dev.438250.xyz/"
-  - "https://git-clone.ccrui.dev/"
-  - "https://b.yesican.top/"
-  - "https://hub.why-ing.top/"
-  - "https://q-github.cnxiaobai.com/"
-  - "https://g.108964.xyz/"
-  - "https://git.maomao.ovh/"
-  - "https://git.llvho.com/"
-  - "https://ghp.opendatahub.xyz/"
-  - "https://privateghproxy.iil.im/"
-  - "https://gh.mtx72.cc/"
-  - "https://git.loushi.site/"
-  - "https://ghproxy.gopher.ink/"
-  - "https://gh.tou.lu/"
-  - "https://gh.aurzex.top/"
+# GitHub 代理列表：保持为空，避免自动代理改写 mihomo 规则 raw URL。
+ghproxy-group: []
 
 # -----------获取订阅-----------
 # 重试次数(获取订阅失败后重试次数)
