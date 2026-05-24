@@ -2,7 +2,6 @@ sub-urls:
 - https://free.datiya.com/uploads/{Ymd}-clash.yaml
 - https://node.freeclashnode.com/uploads/{Y}/{mm}/0-{Ymd}.yaml
 - https://node.freeclashnode.com/uploads/{Y}/{mm}/1-{Ymd}.yaml
-- https://node.freeclashnode.com/uploads/{Y}/{mm}/2-{Ymd}.yaml
 - https://node.freeclashnode.com/uploads/{Y}/{mm}/3-{Ymd}.yaml
 - https://raw.githubusercontent.com/10ium/ClashFactory/main/providers/10ium-HiN-VPN.txt
 - https://raw.githubusercontent.com/10ium/ClashFactory/main/providers/10ium-config-fetcher.txt
@@ -105,6 +104,7 @@ sub-urls:
 - https://raw.githubusercontent.com/ts-sf/fly/main/clash
 - https://raw.githubusercontent.com/vxiaov/free_proxies/main/clash/clash.provider.yaml
 - https://raw.githubusercontent.com/vxiaov/free_proxies/main/links.txt
+- https://raw.githubusercontent.com/xiaoji235/airport-free/main/clash/naidounode.txt
 - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray.txt
 - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray/v2rayshare.txt
 - https://raw.githubusercontent.com/xtoolkit/TVC/main/subscriptions/meta/mix
