@@ -40,6 +40,7 @@ sub-urls:
 - https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/surfboard/Barabama_ndnode.yaml
 - https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/surfboard/Ruk1ng001.yaml
 - https://raw.githubusercontent.com/barry-far/V2ray-config/main/Sub2.txt
+- https://raw.githubusercontent.com/beck-8/sub-urls/refs/heads/main/sub.txt
 - https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml
 - https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml
 - https://raw.githubusercontent.com/firefoxmmx2/v2rayshare_subcription/main/subscription/clash_sub.yaml
@@ -61,9 +62,9 @@ sub-urls:
 - https://raw.githubusercontent.com/mahdibland/SSAggregator/master/sub/sub_merge_yaml.yml
 - https://raw.githubusercontent.com/mahdibland/ShadowsocksAggregator/master/Eternity.yml
 - https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/Eternity.yml
-- https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml
 - https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml
 - https://raw.githubusercontent.com/mgit0001/test_clash/main/heima.txt
+- https://raw.githubusercontent.com/mheidari98/.proxy/main/all
 - https://raw.githubusercontent.com/ovmvo/SubShare/main/sub/permanent/mihomo.yaml
 - https://raw.githubusercontent.com/peacefish/nodefree/main/sub/proxy_cf.yaml
 - https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
@@ -71,8 +72,8 @@ sub-urls:
 - https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/snippets/nodes.meta.yml
 - https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash
 - https://raw.githubusercontent.com/sakha1370/OpenRay/main/output/all_valid_proxies.txt
-- https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-14.txt
-- https://raw.githubusercontent.com/sevcator/5ubscrpt10n/main/mini/m1n1-5ub-19.txt
+- https://raw.githubusercontent.com/shaoyouvip/free/refs/heads/main/all.yaml
+- https://raw.githubusercontent.com/shuaidaoya/FreeNodes/refs/heads/main/nodes/all.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/Pawdroid.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/SFZY666.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/_pool.yaml
@@ -90,6 +91,7 @@ sub-urls:
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/peasoft.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/ripaojiedian.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/snakem982.yaml
+- https://raw.githubusercontent.com/sinspired/airport/main/subs/soroushmirzaei.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/trial.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/tssf.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/ttvg.yaml
@@ -105,5 +107,4 @@ sub-urls:
 - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray.txt
 - https://raw.githubusercontent.com/xiaoji235/airport-free/main/v2ray/v2rayshare.txt
 - https://raw.githubusercontent.com/xtoolkit/TVC/main/subscriptions/meta/mix
-- https://raw.githubusercontent.com/yorkLiu/FreeV2RayNode/main/v2ray.txt
 - https://raw.githubusercontent.com/zhangkaiitugithub/passcro/main/speednodes.yaml
