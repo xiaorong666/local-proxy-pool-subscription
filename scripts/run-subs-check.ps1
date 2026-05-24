@@ -91,39 +91,46 @@ foreach ($RelativePath in $RequiredFiles) {
 '@ | Set-Content -Path (Join-Path $PublicDir "index.html") -Encoding utf8
 
 if (-not $SkipGitPush -and (Test-Path (Join-Path $Root ".git"))) {
-    $Git = Get-Command git -ErrorAction SilentlyContinue
-    if (-not $Git) {
+    $GitCommand = (Get-Command git -ErrorAction SilentlyContinue).Source
+    if (-not $GitCommand -and (Test-Path "${env:ProgramFiles}\Git\cmd\git.exe")) {
+        $GitCommand = "${env:ProgramFiles}\Git\cmd\git.exe"
+    }
+
+    if (-not $GitCommand) {
         Write-Warning "Git is not installed; generated files were not pushed."
         exit 0
     }
 
-    $GitUserName = & git config user.name
+    $GitUserName = & $GitCommand config user.name
     if (-not $GitUserName) {
-        & git config user.name "local-proxy-runner"
+        & $GitCommand config user.name "local-proxy-runner"
     }
 
-    $GitUserEmail = & git config user.email
+    $GitUserEmail = & $GitCommand config user.email
     if (-not $GitUserEmail) {
-        & git config user.email "local-proxy-runner@users.noreply.github.com"
+        & $GitCommand config user.email "local-proxy-runner@users.noreply.github.com"
     }
 
-    & git add -- public/*.yaml public/*.txt public/index.html
+    & $GitCommand add -- public/*.yaml public/*.txt public/index.html
     if (Test-Path (Join-Path $PublicDir "stats")) {
-        & git add -- public/stats
+        & $GitCommand add -- public/stats
     }
 
-    & git diff --cached --quiet
-    if ($LASTEXITCODE -eq 0) {
+    $StagedFiles = & $GitCommand diff --cached --name-only
+    if (-not $StagedFiles) {
         Write-Host "No public file changes to commit."
         exit 0
     }
 
-    & git commit -m "chore: update proxy subscriptions"
+    Write-Host "Committing updated subscription files:"
+    $StagedFiles | ForEach-Object { Write-Host " - $_" }
+
+    & $GitCommand commit -m "chore: update proxy subscriptions"
     if ($LASTEXITCODE -ne 0) {
         throw "git commit failed"
     }
 
-    & git push
+    & $GitCommand push origin main
     if ($LASTEXITCODE -ne 0) {
         throw "git push failed. Configure GitHub credentials on this Windows account, then rerun."
     }
