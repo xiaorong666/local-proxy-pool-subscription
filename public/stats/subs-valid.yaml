@@ -16,7 +16,6 @@ sub-urls:
 - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/wenode.txt
 - https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/yudou66.txt
 - https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/clash.yaml
-- https://raw.githubusercontent.com/Leon406/SubCrawler/master/sub/share/vless
 - https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/subs/sub2.txt
 - https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/main/sub/mix
 - https://raw.githubusercontent.com/Misaka-blog/chromego_merge/main/sub/merged_proxies_new.yaml
@@ -65,7 +64,6 @@ sub-urls:
 - https://raw.githubusercontent.com/mahdibland/V2RayAggregator/master/sub/sub_merge_yaml.yml
 - https://raw.githubusercontent.com/mfbpn/tg_mfbpn_sub/main/trial.yaml
 - https://raw.githubusercontent.com/mgit0001/test_clash/main/heima.txt
-- https://raw.githubusercontent.com/mheidari98/.proxy/main/all
 - https://raw.githubusercontent.com/ovmvo/SubShare/main/sub/permanent/mihomo.yaml
 - https://raw.githubusercontent.com/peacefish/nodefree/main/sub/proxy_cf.yaml
 - https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.meta.yml
@@ -92,7 +90,6 @@ sub-urls:
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/peasoft.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/ripaojiedian.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/snakem982.yaml
-- https://raw.githubusercontent.com/sinspired/airport/main/subs/soroushmirzaei.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/trial.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/tssf.yaml
 - https://raw.githubusercontent.com/sinspired/airport/main/subs/ttvg.yaml
