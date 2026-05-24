@@ -20,7 +20,7 @@ progress-mode: "auto"
 # 检查间隔(分钟)
 # 建议使用 cron-expression 表达式，每天凌晨4点和16点执行一次
 # 高峰期检测意义真的不大，节点少，而且不稳定
-check-interval: 360
+check-interval: 180
 
 # -----------检测参数-----------
 # 流水线任务并发数,如不知怎么设置，可将以下任意一个设为 0，将自动设置
@@ -46,7 +46,7 @@ concurrent: 20
 # 保存几个成功的节点，为0代表不限制
 # 如果你的并发数量超过这个参数，那么成功的结果可能会大于这个数值
 # success-limit <= success <= success-limit+concurrent
-success-limit: 200
+success-limit: 300
 
 # 此选项将保存并加载 {上次检测成功的节点} 和 {历次检测成功的节点}
 # 如果为true，则保留之前测试成功的节点
@@ -342,7 +342,7 @@ sub-urls-stats: true
 sub-urls-remote:
   # - "https://example.com/sub-list.txt"
   # - "https://example.com/sub-list.yaml"
-  # - "https://raw.githubusercontent.com/beck-8/sub-urls/main/%E5%B0%8F%E8%80%8C%E7%BE%8E.txt"
+  - "https://raw.githubusercontent.com/beck-8/sub-urls/main/%E5%B0%8F%E8%80%8C%E7%BE%8E.txt"
   # - "http://localhost:8199/more/extra.txt"
   - "https://raw.githubusercontent.com/sinspired/airport/main/subs/merged/col.txt"
   - "https://raw.githubusercontent.com/sinspired/airport/main/subs/merged/cm.txt"
@@ -367,6 +367,13 @@ sub-urls:
   # - "https://raw.githubusercontent.com/example/repo/main/config/{Ymd}.yaml"
   # - "https://raw.githubusercontent.com/example/repo/main/daily/daily-{Y}-{mm}-{d}.yaml"
   # - "https://example.com/sub.txt#我是备注"
+  - "https://raw.githubusercontent.com/sakha1370/OpenRay/main/output/all_valid_proxies.txt"
+  - "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Base64/BLACK_VLESS_RUS_base64.txt"
+  - "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS_mobile.txt"
+  - "https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_SS+All_RUS.txt"
+  - "https://raw.githubusercontent.com/anaer/Sub/main/proxies.yaml"
+  - "https://raw.githubusercontent.com/asgharkapk/Sub-Config-Extractor/main/output_configs/clash/Ruk1ng001.yaml"
+  - "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/clash.yaml"
   - "https://free.datiya.com/uploads/{Ymd}-clash.yaml"
   - "https://node.freeclashnode.com/uploads/{Y}/{mm}/0-{Ymd}.yaml"
   - "https://node.freeclashnode.com/uploads/{Y}/{mm}/1-{Ymd}.yaml"

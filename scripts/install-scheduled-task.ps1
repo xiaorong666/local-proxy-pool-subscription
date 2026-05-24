@@ -1,6 +1,6 @@
 param(
     [string]$TaskName = "LocalProxyPoolSubscription",
-    [int]$EveryHours = 6,
+    [int]$EveryHours = 3,
     [int]$TimeoutMinutes = 45,
     [switch]$RunNow
 )
