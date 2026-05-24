@@ -146,7 +146,7 @@ sub-store-path: "/pool"
 
 # 覆写订阅的url，这个的作用是生成带指定规则的mihomo/clash.meta订阅链接
 # 防止网络不好，所以现在内置，依赖:8199端口
-mihomo-overwrite-url: https://raw.githubusercontent.com/sinspired/override-hub/refs/heads/main/yaml/ACL4SSR_Online_Full.yaml
+mihomo-overwrite-url: https://raw.githubusercontent.com/beck-8/override-hub/refs/heads/main/yaml/ACL4SSR_Online_Full.yaml
 
 # singbox规则配置
 # json文件为分流规则
