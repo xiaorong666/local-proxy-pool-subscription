@@ -8,7 +8,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 $Root = Resolve-Path (Join-Path $PSScriptRoot "..")
-$RunScript = Join-Path $Root "scripts\run-subs-check.ps1"
+$RunScript = Join-Path $Root "scripts\run-local-proxy-task.ps1"
 $LogDir = Join-Path $Root "logs"
 $LogFile = Join-Path $LogDir "local-proxy-pool-task.log"
 New-Item -ItemType Directory -Force -Path $LogDir | Out-Null
